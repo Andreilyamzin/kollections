@@ -19,8 +19,11 @@ private final EmployeeServise servise;
  }
 
  @GetMapping("/add")
-    public void add(@RequestParam String firsnName,@RequestParam String lastName){
-      servise.add(firsnName, lastName);
+    public void add(@RequestParam String firsnName,
+                    @RequestParam String lastName,
+                    @RequestParam int salary,
+                    @RequestParam int department){
+      servise.add(firsnName, lastName, salary, department);
     }
     @GetMapping("/remove")
     public void remove(@RequestParam String firsnName,@RequestParam String lastName){
